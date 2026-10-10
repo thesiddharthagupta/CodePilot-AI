@@ -8,6 +8,8 @@
   <meta name="keywords" content="collaborative IDE, online code editor, AI coding assistant, code compiler, real-time collaboration" />
   <meta property="og:title" content="CodePilot AI — Collaborative IDE" />
   <meta property="og:description" content="Code together, compile instantly, get AI help — all in one place." />
+  <meta property="og:url" content="https://thesiddharthagupta.github.io/CodePilot-AI/" />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='50'>CP</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -474,6 +476,42 @@
     }
 
     /* ══════════════════════════════
+       TECH STACK SECTION
+    ══════════════════════════════ */
+    .tech-section {
+      padding: 80px 0;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .tech-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: border-color 200ms ease, transform 200ms ease;
+    }
+    .tech-card:hover {
+      border-color: rgba(14,165,233,0.3);
+      transform: translateY(-2px);
+    }
+    .tech-emoji { font-size: 28px; margin-bottom: 10px; }
+    .tech-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .tech-role {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    /* ══════════════════════════════
        CTA BANNER
     ══════════════════════════════ */
     .cta-section {
@@ -587,8 +625,9 @@
       <div class="nav-links">
         <a class="nav-link" href="#features" id="nav-features">Features</a>
         <a class="nav-link" href="#languages" id="nav-languages">Languages</a>
-        <a class="nav-link" href="docs/SETUP.md" id="nav-docs">Docs</a>
-        <a class="nav-cta" href="https://github.com/thesiddharthagupta/CodePilot-AI" id="nav-open-app" target="_blank">View on GitHub →</a>
+        <a class="nav-link" href="#tech-stack" id="nav-stack">Stack</a>
+        <a class="nav-link" href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/README.md" id="nav-docs" target="_blank" rel="noopener noreferrer">Docs</a>
+        <a class="nav-cta" href="https://github.com/thesiddharthagupta/CodePilot-AI" id="nav-github" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
       </div>
     </div>
   </div>
@@ -614,11 +653,11 @@
     </p>
 
     <div class="hero-actions">
-      <a href="https://github.com/thesiddharthagupta/CodePilot-AI" class="btn-hero-primary" id="hero-cta-primary" target="_blank">
+      <a href="https://github.com/thesiddharthagupta/CodePilot-AI" class="btn-hero-primary" id="hero-cta-primary" target="_blank" rel="noopener noreferrer">
         ⭐ Star on GitHub
       </a>
-      <a href="docs/ARCHITECTURE.md" class="btn-hero-secondary" id="hero-cta-docs">
-        📖 Read the Docs
+      <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/ARCHITECTURE.md" class="btn-hero-secondary" id="hero-cta-docs" target="_blank" rel="noopener noreferrer">
+        📖 Architecture Docs
       </a>
     </div>
 
@@ -628,7 +667,7 @@
         <div class="t-dot t-red"></div>
         <div class="t-dot t-yellow"></div>
         <div class="t-dot t-green"></div>
-        <span class="terminal-title">main.py — CollabCode Editor</span>
+        <span class="terminal-title">main.py — CodePilot AI Editor</span>
       </div>
       <div class="terminal-body">
         <div><span class="t-comment"># 🤖 AI-assisted Python session</span></div>
@@ -700,12 +739,12 @@
       </div>
       <div class="feature-card" id="feature-projects">
         <div class="feature-icon icon-violet">📁</div>
-        <h3 class="feature-title">Project & File Management</h3>
+        <h3 class="feature-title">Project &amp; File Management</h3>
         <p class="feature-desc">Organise your work in projects with multiple files. Create, rename, delete, and switch files — persisted to SQLite.</p>
       </div>
       <div class="feature-card" id="feature-security">
         <div class="feature-icon icon-rose">🔒</div>
-        <h3 class="feature-title">Auth & Security</h3>
+        <h3 class="feature-title">Auth &amp; Security</h3>
         <p class="feature-desc">JWT-based authentication, bcrypt password hashing, Helmet.js headers, and per-user data isolation out of the box.</p>
       </div>
     </div>
@@ -738,18 +777,69 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════ TECH STACK ═══════════════════════════════════ -->
+<section class="tech-section" id="tech-stack">
+  <div class="container">
+    <p class="section-label">Built with</p>
+    <h2 class="section-title">Modern Tech Stack</h2>
+    <p class="section-sub">Production-grade technologies chosen for performance, scalability, and developer experience.</p>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-emoji">⚛️</div>
+        <div class="tech-name">React + Vite</div>
+        <div class="tech-role">Frontend</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🟦</div>
+        <div class="tech-name">TypeScript</div>
+        <div class="tech-role">Type Safety</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🖊️</div>
+        <div class="tech-name">Monaco Editor</div>
+        <div class="tech-role">Code Editor</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🟢</div>
+        <div class="tech-name">Node.js + Express</div>
+        <div class="tech-role">Backend API</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🔌</div>
+        <div class="tech-name">WebSockets</div>
+        <div class="tech-role">Real-time Collab</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🗄️</div>
+        <div class="tech-name">SQLite (Drizzle)</div>
+        <div class="tech-role">Database</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🐳</div>
+        <div class="tech-name">Docker</div>
+        <div class="tech-role">Deployment</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-emoji">🤖</div>
+        <div class="tech-name">Gemini AI</div>
+        <div class="tech-role">AI Assistant</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════ CTA ═══════════════════════════════════ -->
 <section class="cta-section" id="cta">
   <div class="container">
     <div class="cta-card">
-      <h2>Ready to start coding?</h2>
-      <p>Open the app, create a project, and start collaborating — no setup needed.</p>
+      <h2>Ready to explore the project?</h2>
+      <p>Clone the repo, run with Docker, and start collaborating — full setup guide included.</p>
       <div class="hero-actions">
-        <a href="https://github.com/thesiddharthagupta/CodePilot-AI" class="btn-hero-primary" id="cta-launch-btn" target="_blank">
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI" class="btn-hero-primary" id="cta-github-btn" target="_blank" rel="noopener noreferrer">
           ⭐ Star on GitHub
         </a>
-        <a href="https://github.com/thesiddharthagupta/CodePilot-AI#readme" class="btn-hero-secondary" id="cta-health-btn" target="_blank">
-          📖 Read the README
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/DEPLOYMENT.md" class="btn-hero-secondary" id="cta-deploy-btn" target="_blank" rel="noopener noreferrer">
+          🚀 Deployment Guide
         </a>
       </div>
     </div>
@@ -765,15 +855,15 @@
         <span class="footer-copy">© 2026 CodePilot AI. Built by thesiddharthagupta.</span>
       </div>
       <div class="footer-links">
-        <a href="docs/SETUP.md"        class="footer-link" id="footer-setup">Setup</a>
-        <a href="docs/API.md"          class="footer-link" id="footer-api">API</a>
-        <a href="docs/SECURITY.md"     class="footer-link" id="footer-security">Security</a>
-        <a href="docs/DEPLOYMENT.md"   class="footer-link" id="footer-deploy">Deploy</a>
-        <a href="docs/ARCHITECTURE.md" class="footer-link" id="footer-arch">Architecture</a>
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/SETUP.md"        class="footer-link" id="footer-setup"    target="_blank" rel="noopener noreferrer">Setup</a>
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/API.md"          class="footer-link" id="footer-api"      target="_blank" rel="noopener noreferrer">API</a>
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/SECURITY.md"     class="footer-link" id="footer-security" target="_blank" rel="noopener noreferrer">Security</a>
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/DEPLOYMENT.md"   class="footer-link" id="footer-deploy"   target="_blank" rel="noopener noreferrer">Deploy</a>
+        <a href="https://github.com/thesiddharthagupta/CodePilot-AI/blob/main/docs/ARCHITECTURE.md" class="footer-link" id="footer-arch"     target="_blank" rel="noopener noreferrer">Architecture</a>
       </div>
     </div>
   </div>
 </footer>
 
 </body>
-</html>
+</html>
