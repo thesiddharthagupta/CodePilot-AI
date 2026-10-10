@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Navbar } from './components/Navbar';
-import { Sidebar } from './components/Sidebar';
+import { Navbar, Sidebar } from './components/Layout';
 import { Editor } from './components/Editor';
-import { OutputDock } from './components/OutputDock';
-import { AIPanel } from './components/AIPanel';
-import { AuthModal } from './components/Modals/AuthModal';
-import { NewProjectModal } from './components/Modals/NewProjectModal';
-import { ShareModal } from './components/Modals/ShareModal';
-import { SettingsModal } from './components/Modals/SettingsModal';
-import { TemplatesModal } from './components/Modals/TemplatesModal';
+import { OutputDock } from './components/Output';
+import { AIPanel } from './components/AI';
+import {
+  AuthModal,
+  NewProjectModal,
+  ShareModal,
+  SettingsModal,
+  TemplatesModal,
+} from './components/Shared';
 import { api } from './services/api';
 import {
   User,
